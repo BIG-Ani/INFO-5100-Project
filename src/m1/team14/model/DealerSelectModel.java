@@ -1,5 +1,9 @@
 package m1.team14.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import dataproto.Dealer;
 import m1.team14.Events;
 
 class DealerSelectModel extends AbstractModel {
@@ -16,4 +20,19 @@ class DealerSelectModel extends AbstractModel {
   public int getCurrentDealerId() {
     return currentDealerId;
   }
+  
+  
+  
+  private static int numOfDealers = 8;
+  
+  List<Dealer> getDealer(){
+  List<Dealer> dealerList = new ArrayList<>();
+  for(int i = 0; i < numOfDealers; i++){
+   Dealer newDealer = new Dealer();
+  
+   dealerList.add(newDealer);
+  } 
+ return (dealerList);
 }
+}
+ 
